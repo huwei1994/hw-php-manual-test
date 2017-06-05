@@ -101,3 +101,5 @@ var_dump($superman_1->hh());
 /*$superman_2 = $container->make('xpower');
 $array = [1,2,3,4];
 var_dump($superman_2->activate($array));*/
+
+var_dump('增加点东西，不然提交不了');

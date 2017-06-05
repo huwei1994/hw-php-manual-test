@@ -15,5 +15,6 @@ $example = function ($v,$k)
 
 $hh = array_walk($array,$example);
 //echo $hh;
+var_dump('增加点东西，不然提交不了');
 
 

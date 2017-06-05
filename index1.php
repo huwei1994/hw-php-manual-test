@@ -28,6 +28,7 @@ class obj implements arrayaccess {
 }
 
 $obj = new obj;
+var_dump('增加点东西，不然提交不了');
 
 var_dump(isset($obj["two"])).'<br/>';
 /*var_dump($obj["two"]).'<br/>';

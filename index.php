@@ -50,3 +50,4 @@ $my_cart->add('eggs', 6);
 // 打出出总价格，其中有 5% 的销售税.
 print $my_cart->getTotal(0.05) . "\n";
 // 最后结果是 54.29
+var_dump('增加点东西，不然提交不了');

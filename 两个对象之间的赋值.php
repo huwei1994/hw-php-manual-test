@@ -23,3 +23,4 @@ var_dump($obj3 instanceof Test);
 
 $obj4 = Child::getNew();
 var_dump($obj4 instanceof Test);
+var_dump('增加点东西，不然提交不了');

@@ -23,3 +23,4 @@ $object = (object) [
     'propertyTwo' => 42,
   ];
 var_dump($object->propertyOne)."</br>"; //
+var_dump('增加点东西，不然提交不了');

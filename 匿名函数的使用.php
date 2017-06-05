@@ -60,3 +60,5 @@ function dump($vars, $label = '', $return = false)
     echo $content;
     return null;
 }
+
+var_dump('增加点东西，不然提交不了');
