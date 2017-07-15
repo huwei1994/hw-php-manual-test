@@ -1,53 +1,62 @@
 <?php
-//匿名函数中的use 使用父作用域的变量
-
-// 一个基本的购物车，包括一些已经添加的商品和每种商品的数量。
-// 其中有一个方法用来计算购物车中所有商品的总价格，该方法使
-// 用了一个 closure 作为回调函数。
-class Cart
-{
-    const PRICE_BUTTER  = 1.00;
-    const PRICE_MILK    = 3.00;
-    const PRICE_EGGS    = 6.95;
-
-    protected   $products = array();
-    
-    public function add($product, $quantity)
-    {
-        $this->products[$product] = $quantity;
-    }
-    
-    public function getQuantity($product)
-    {
-        return isset($this->products[$product]) ? $this->products[$product] :
-               FALSE;
-    }
-    
-    public function getTotal($tax)
-    {
-        $total = 0.00;
-        
-        $callback =
-            function ($quantity, $product) use ($tax, &$total)
-            {
-                $pricePerItem = constant(__CLASS__ . "::PRICE_" .
-                    strtoupper($product));
-                $total += ($pricePerItem * $quantity) * ($tax + 1.0);
-            };
-        
-        array_walk($this->products, $callback);
-        return round($total, 2);;
-    }
+/*$arr = array(1, 2, 3, 4);
+foreach ($arr as &$value) {
+    $value = $value * 2;
 }
+var_dump($arr);
+// $arr is now array(2, 4, 6, 8)
+unset($value); // 最后取消掉引用
+var_dump($arr);*/
 
-$my_cart = new Cart;
+/*$arr = array(1, 2, 3, 4);
+foreach ($arr as $value) {
+    $value = $value * 2;
+}
+var_dump($arr);
 
-// 往购物车里添加条目
-$my_cart->add('butter', 1);
-$my_cart->add('milk', 3);
-$my_cart->add('eggs', 6);
+$arr = array(1, 2, 3, 4);
+$a = [];
+foreach ($arr as $value) {
+    $a[] = $value * 2;
+}
+var_dump($a);*/
 
-// 打出出总价格，其中有 5% 的销售税.
-print $my_cart->getTotal(0.05) . "\n";
-// 最后结果是 54.29
-var_dump('增加点东西，不然提交不了');
+/*foreach (array(1, 2, 3, 4) as &$value) {
+    $value = $value * 2;
+}
+var_dump();*/
+
+/*//下面的代码等同于 foreach
+$arr = array('a','b');
+//reset($arr);
+while(list(,$value) = each($arr))
+{
+    echo "value:".$value;
+}*/
+
+//使用。list解包
+$array = [
+    [1, 2],
+    [3, 4],
+];
+
+/*foreach ($array as list($a, $b)) {
+    // $a contains the first element of the nested array,
+    // and $b contains the second element.
+    echo "A: $a; B: $b\n";
+}*/
+/*$arr=[1,2,3];
+foreach ($arr as &$v){
+    //nothing to do
+}
+/*foreach ($arr as $v){
+    //nothing to do
+}
+var_export($arr);*/
+
+public function hh($arr = array(1,2,3,4,5,6,7),$a = 3)
+{
+    $b = $arr;
+    //每次从数组中,取出一个数字。让后将数组赋值给$c
+    
+}
