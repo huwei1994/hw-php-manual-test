@@ -1,3 +1,3 @@
 <?php
-	echo 'this is git';
+	echo 'this is';
 ?>
