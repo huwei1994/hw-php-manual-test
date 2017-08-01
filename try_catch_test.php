@@ -22,10 +22,18 @@ class A
 		    return 222;
 		}
 	}
+
+	public function __set($name,$value){
+        $this->$name = $value;
+    }
 }
 
 $a = new A();
+
+$a->kkk = 'rewrer';
+
 $b = $a->hh();
 var_dump($b);
+var_dump($a);
 
 ?>
