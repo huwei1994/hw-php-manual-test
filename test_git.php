@@ -2,7 +2,7 @@
 	return [
 
 	// 积分系统域名
-	'jifenHost' => 'http://jifen.truckclub.mepire.com/',	
+	'jifenHost' => 'http://hhhhh.com/',	
 
 	// 积分系统的最小响应时间(单位: 秒)
 	'timeOut'	=> 10,	
